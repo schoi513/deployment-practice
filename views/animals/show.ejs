@@ -1,0 +1,14 @@
+<%- include ('../partials/boilerplate') %>
+
+    <div class='animal'>
+      <% if (animalPicture) { %>
+        <img src="<%= animalPicture %>" alt="A photo of a <% animal.species %>" />
+     <% } %>
+      <h3><%= animal.name %></h3>
+      <p><%= animal.species %></p>
+      <p><%= animal.location %></p>
+      <p><%= animal.cuteness %></p>
+      <a href='/animals/'>See all animals</a>
+    </div>
+
+<%- include ('../partials/end') %>

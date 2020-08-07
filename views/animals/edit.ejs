@@ -1,0 +1,11 @@
+<%- include('../partials/boilerplate') %>
+
+<form method="POST" action="/animals/<%= animal.id %>?_method=PUT">
+  <input type="text" name="name" value="<%= animal.name %>" placeholder="Name" />
+  <input type="number" name="cuteness" value="<%= animal.cuteness %>" placeholder="Cuteness" />
+  <input type="text" name="location" value="<%= animal.location %>" placeholder="Location" />
+  <input type="text" name="species" value="<%= animal.species %>" placeholder="Species" />
+  <input type="submit" value="Edit <%= animal.name %>" />
+</form>
+
+<%- include('../partials/end') %>

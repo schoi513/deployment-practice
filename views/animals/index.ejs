@@ -1,0 +1,16 @@
+<%- include ('../partials/boilerplate') %>
+
+  <a href="/animals/add">Add animal</a>
+  <div class="animals">
+    <% for (let animal of data.animals) { %>
+      <div class="animal">
+        <h3><%= animal.name %></h3>
+        <a href="/animals/<%= animal.id%>">Learn more</a>
+        <form method="POST" action="/animals/<%= animal.id %>?_method=DELETE">
+          <input type="submit" value="delete animal">
+        </form>
+      </div>
+    <% } %>
+  </div>
+
+<%- include ('../partials/end') %>
